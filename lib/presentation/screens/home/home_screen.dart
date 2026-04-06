@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ostad_14_assignment_project_youtube_lite/core/constants/app_colors.dart';
 import 'package:ostad_14_assignment_project_youtube_lite/core/constants/app_strings.dart';
+import 'package:ostad_14_assignment_project_youtube_lite/presentation/screens/home/widget/youtube_nav_tile.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -43,11 +44,61 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: ListView(
-          children: [
-            _buildSectionHeader(AppStrings.sectionBrowse,),
-            _buildSectionHeader(AppStrings.sectionLibrary,),
-            _buildSectionHeader(AppStrings.sectionMore,),
-          ],
+        children: [
+          _buildSectionHeader(AppStrings.sectionBrowse),
+          YoutubeNavTile(
+            icon: Icons.home,
+            label: AppStrings.navHome,
+            onTap: () {},
+          ),
+          YoutubeNavTile(
+            icon: Icons.shortcut_sharp,
+            label: AppStrings.navShorts,
+            onTap: () {},
+          ),
+          YoutubeNavTile(
+            icon: Icons.subscriptions,
+            label: AppStrings.navSubscriptions,
+            onTap: () {},
+          ),
+          YoutubeNavTile(
+            icon: Icons.explore,
+            label: AppStrings.navExplore,
+            onTap: () {},
+          ),
+          YoutubeNavTile(
+            icon: Icons.trending_up,
+            label: AppStrings.navTrending,
+            onTap: () {},
+          ),
+          _buildSectionHeader(AppStrings.sectionLibrary),
+          YoutubeNavTile(
+            icon: Icons.history,
+            label: AppStrings.navHistory,
+            onTap: () {},
+          ),
+          YoutubeNavTile(
+            icon: Icons.watch_later,
+            label: AppStrings.navWatchLater,
+            onTap: () {},
+          ),
+          YoutubeNavTile(
+            icon: Icons.linked_camera,
+            label: AppStrings.navLikedVideos,
+            onTap: () {},
+          ),
+          _buildSectionHeader(AppStrings.sectionMore),
+          YoutubeNavTile(
+            icon: Icons.settings,
+            label: AppStrings.navSettings,
+            onTap: () {},
+          ),
+          YoutubeNavTile(
+            icon: Icons.help_outline_sharp,
+            label: AppStrings.navHelp,
+            onTap: () {},
+          ),
+        ],
       ),
     );
   }
